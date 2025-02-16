@@ -9,20 +9,9 @@ hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls
 cities  Egypt.txt  France.txt  Germany.txt  Lebnon.txt  Oman.txt
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ cd cities/
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ touc Egypt.txt Oman.txt Lebnon.txt Germany.txt France.txt
-
-Command 'touc' not found, did you mean:
-
-  command 'touch' from deb coreutils (8.30-3ubuntu2)
-
-Try: sudo apt install <deb name>
-
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ touch Egypt.txt Oman.txt Lebnon.txt Germany.txt France.txt
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ cd ..
-hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ chmod 650 Egypt.txt Lebon.txt Oman.txt 
-chmod: cannot access 'Lebon.txt': No such file or directory
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ chmod 650 Egypt.txt Lebnon.txt Oman.txt 
-hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls-l
-ls-l: command not found
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
 total 4
 drwxrwxr-x 2 hoda hoda 4096 فبر 16 14:06 cities
@@ -47,7 +36,9 @@ drwxrwxr-x 2 hoda hoda 4096 فبر 16 14:06 cities
 -rw-rw-r-- 1 hoda hoda    0 فبر 15 19:04 Germany.txt
 -rw-r-x--- 1 Arab hoda    0 فبر 15 19:04 Lebnon.txt
 -rw-r-x--- 1 Arab hoda    0 فبر 15 19:04 Oman.txt
+
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo chown Europ Germany.txt France.txt  
+
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
 total 4
 drwxrwxr-x 2 hoda  hoda 4096 فبر 16 14:06 cities
@@ -56,8 +47,7 @@ drwxrwxr-x 2 hoda  hoda 4096 فبر 16 14:06 cities
 -rw-rw-r-- 1 Europ hoda    0 فبر 15 19:04 Germany.txt
 -rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Lebnon.txt
 -rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Oman.txt
-hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 2002 -d /home/Schengen -s/bin/bash Schengen
-useradd: UID 2002 is not unique
+
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 1999 -d /home/Schengen -s/bin/bash Schengen
 hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
 total 4
