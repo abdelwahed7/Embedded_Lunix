@@ -1,0 +1,78 @@
+ _   _      _ _         ____   _    _   _ ____    _    _ 
+| | | | ___| | | ___   |  _ \ / \  | \ | |  _ \  / \  | |
+| |_| |/ _ \ | |/ _ \  | |_) / _ \ |  \| | | | |/ _ \ | |
+|  _  |  __/ | | (_) | |  __/ ___ \| |\  | |_| / ___ \|_|
+|_| |_|\___|_|_|\___/  |_| /_/   \_\_| \_|____/_/   \_(_)
+                                                         
+hoda@hoda-HP-Laptop-15-bs0xx:~$ cd countries/
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls
+cities  Egypt.txt  France.txt  Germany.txt  Lebnon.txt  Oman.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ cd cities/
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ touc Egypt.txt Oman.txt Lebnon.txt Germany.txt France.txt
+
+Command 'touc' not found, did you mean:
+
+  command 'touch' from deb coreutils (8.30-3ubuntu2)
+
+Try: sudo apt install <deb name>
+
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ touch Egypt.txt Oman.txt Lebnon.txt Germany.txt France.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries/cities$ cd ..
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ chmod 650 Egypt.txt Lebon.txt Oman.txt 
+chmod: cannot access 'Lebon.txt': No such file or directory
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ chmod 650 Egypt.txt Lebnon.txt Oman.txt 
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls-l
+ls-l: command not found
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
+total 4
+drwxrwxr-x 2 hoda hoda 4096 فبر 16 14:06 cities
+-rw-r-x--- 1 hoda hoda    0 فبر 15 19:04 Egypt.txt
+-rw-rw-r-- 1 hoda hoda    0 فبر 15 19:04 France.txt
+-rw-rw-r-- 1 hoda hoda    0 فبر 15 19:04 Germany.txt
+-rw-r-x--- 1 hoda hoda    0 فبر 15 19:04 Lebnon.txt
+-rw-r-x--- 1 hoda hoda    0 فبر 15 19:04 Oman.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 2001 -d /home/Arabs -s/bin/bash Arab
+[sudo] password for hoda: 
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 2002 -d /home/Europs -s/bin/bash Europ
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ id Arab 
+uid=2001(Arab) gid=2001(Arab) groups=2001(Arab)
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ id Europ 
+uid=2002(Europ) gid=2002(Europ) groups=2002(Europ)
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo chown Arab Egypt.txt Lebnon.txt Oman.txt 
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
+total 4
+drwxrwxr-x 2 hoda hoda 4096 فبر 16 14:06 cities
+-rw-r-x--- 1 Arab hoda    0 فبر 15 19:04 Egypt.txt
+-rw-rw-r-- 1 hoda hoda    0 فبر 15 19:04 France.txt
+-rw-rw-r-- 1 hoda hoda    0 فبر 15 19:04 Germany.txt
+-rw-r-x--- 1 Arab hoda    0 فبر 15 19:04 Lebnon.txt
+-rw-r-x--- 1 Arab hoda    0 فبر 15 19:04 Oman.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo chown Europ Germany.txt France.txt  
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
+total 4
+drwxrwxr-x 2 hoda  hoda 4096 فبر 16 14:06 cities
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Egypt.txt
+-rw-rw-r-- 1 Europ hoda    0 فبر 15 19:04 France.txt
+-rw-rw-r-- 1 Europ hoda    0 فبر 15 19:04 Germany.txt
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Lebnon.txt
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Oman.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 2002 -d /home/Schengen -s/bin/bash Schengen
+useradd: UID 2002 is not unique
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo useradd -u 1999 -d /home/Schengen -s/bin/bash Schengen
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
+total 4
+drwxrwxr-x 2 hoda  hoda 4096 فبر 16 14:06 cities
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Egypt.txt
+-rw-rw-r-- 1 Europ hoda    0 فبر 15 19:04 France.txt
+-rw-rw-r-- 1 Europ hoda    0 فبر 15 19:04 Germany.txt
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Lebnon.txt
+-rw-r-x--- 1 Arab  hoda    0 فبر 15 19:04 Oman.txt
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ sudo chgrp Schengen France.txt Germany.txt 
+hoda@hoda-HP-Laptop-15-bs0xx:~/countries$ ls -l
+total 4
+drwxrwxr-x 2 hoda  hoda     4096 فبر 16 14:06 cities
+-rw-r-x--- 1 Arab  hoda        0 فبر 15 19:04 Egypt.txt
+-rw-rw-r-- 1 Europ Schengen    0 فبر 15 19:04 France.txt
+-rw-rw-r-- 1 Europ Schengen    0 فبر 15 19:04 Germany.txt
+-rw-r-x--- 1 Arab  hoda        0 فبر 15 19:04 Lebnon.txt
+-rw-r-x--- 1 Arab  hoda        0 فبر 15 19:04 Oman.txt
